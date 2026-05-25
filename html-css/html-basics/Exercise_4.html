@@ -1,20 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programming Languages Table</title>
 
     <style>
-
-
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: left;
+        body {
+            background-color: #151515;
+            color: #dcdcdc;
+            font-family: "Courier New", monospace;
+            margin: 0;
+            padding: 20px;
         }
 
+        h1 {
+            color: #00ff99;
+            text-align: center;
+            text-decoration: underline;
+            font-size: 34px;
+            margin-top: 0;
+        }
 
+        p {
+            color: #cfcfcf;
+            font-style: italic;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 2px solid #00ff99;
+            margin-top: 20px;
+        }
+
+        caption {
+            color: #ffd700;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        
+        th,td {
+            border: 1px solid #555;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            color: #00ff99;
+            background-color: #333;
+        }
+
+        td {
+            background-color: #2b2b2b;
+        }
+
+        tbody tr:nth-child(even) td {
+            background-color: #363636;
+        }
+
+        tbody td:first-child {
+            color: #ff9900;
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -28,7 +79,7 @@
     </p>
 
     <table>
-        <caption><strong>Comparison of Popular Programming Languages</strong> </caption>
+        <caption><strong> Popular Programming Languages</strong></caption>
 
         <thead>
             <tr>
@@ -72,10 +123,13 @@
                 <td>Intermediate</td>
                 <td>.NET, Unity</td>
             </tr>
-
-
         </tbody>
     </table>
 
+    <p>Note: Data compiled from industry surveys as 2024.
+
+    </p>
+
 </body>
+
 </html>
