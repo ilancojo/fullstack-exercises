@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+
+    <style>
+       
+        #container {
+            width: 50%;
+            margin: auto;
+            position: relative;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+     p{
+            position: absolute;
+            margin: 0;
+        }
+
+        #child1 {
+            top: 5px;
+            left: 5px;
+            background-color: gold;
+
+        }
+
+        #child2 {
+            top: 5px;
+            right: 5px;
+            background-color: chartreuse;
+        }
+
+        #child3 {
+            bottom: 5px;
+            left: 5px;
+            background-color: aqua;
+        }
+
+        #child4 {
+            bottom: 5px;
+            right: 5px;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 >Texts on image</h2>
+
+    <div id="container">
+
+        <img 
+            src="https://www.simplyrecipes.com/thmb/KRw_r32s4gQeOX-d07NWY1OlOFk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Homemade-Pizza-Dough-Lead-Shot-1c-c2b1885d27d4481c9cfe6f6286a64342.jpg"
+            alt="Pizza image"
+        >
+
+        <p id="child1">Top-Left</p>
+        <p id="child2">Top-Right</p>
+        <p id="child3">Bottom-Left</p>
+        <p id="child4">Bottom-Right</p>
+
+    </div>
+
+</body>
+
+</html>
