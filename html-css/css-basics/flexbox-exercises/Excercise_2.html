@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 2 - Flex Grow</title>
+</head>
+
+<style>
+
+h2 {
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.container {
+    display: flex;
+    width: 500px;
+    height: 70px;
+    border: 2px solid #ddd;
+    margin-bottom: 25px;
+}
+
+.box {
+    background-color: cornflowerblue;
+    border: 3px solid white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.equal {
+    flex-grow: 1;
+}
+
+.small {
+    flex-grow: 1;
+}
+
+.big {
+    flex-grow: 2;
+}
+</style>
+
+<body>
+
+
+    <h2>4 boxes evenly distributed:</h2>
+
+    <div class="container">
+        <div class="box equal">1</div>
+        <div class="box equal">2</div>
+        <div class="box equal">3</div>
+        <div class="box equal">4</div>
+    </div>
+
+    <h2>2 boxes (2 and 3) are twice as big as the first:</h2>
+
+    <div class="container">
+        <div class="box small">1</div>
+        <div class="box big">2</div>
+        <div class="box big">3</div>
+    </div>
+
+</body>
+</html>
