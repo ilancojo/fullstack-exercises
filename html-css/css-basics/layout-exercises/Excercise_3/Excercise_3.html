@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout Exercise 3</title>
+    <link rel="stylesheet" href="Excercise_3.css">
+  </head>
+
+  <body>
+    <div class="form-card">
+      <h1>Contact Form</h1>
+
+        <div class="row">
+          <div class="field">
+            <label for="first-name">First Name</label>
+            <input id="first-name" type="text" />
+          </div>
+
+          <div class="field">
+            <label for="last-name">Last Name</label>
+            <input id="last-name" type="text" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="email">Email Address</label>
+            <input id="email" type="email" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="subject">Subject</label>
+            <select id="subject">
+              <option>Select a topic</option>
+              <option>General Question</option>
+              <option>Support</option>
+              <option>Feedback</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="priority">Priority</label>
+            <select id="priority">
+              <option>Low</option>
+              <option>Medium</option>
+              <option>High</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Tell us how we can help..."></textarea>
+          </div>
+        </div>
+
+        <div class="preferences-title">Contact Preferences</div>
+
+        <div class="preferences">
+         
+            <input type="checkbox" />
+            Email Updates
+          
+            <input type="checkbox" />
+            Phone Follow-up
+          
+            
+            <input type="checkbox" />
+            Newsletter
+         
+        </div>
+
+        <div class="buttons">
+          <button class="save" type="button">Save Draft</button>
+          <button class="send" type="submit">Send Message</button>
+        </div>
+
+    </div>
+  </body>
+</html>

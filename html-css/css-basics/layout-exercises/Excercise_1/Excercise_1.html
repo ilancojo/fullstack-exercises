@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout Exercise 1</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #26313d;
+      }
+
+      header {
+        background: linear-gradient(90deg, #667eea, #764ba2);
+        color: white;
+        padding: 24px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 26px;
+      }
+
+      .page {
+        flex: 1;
+        display: flex;
+      }
+
+      nav {
+        width: 180px;
+        background-color: #f3f6fa;
+        padding: 24px;
+      }
+
+      nav h2,
+      aside h2 {
+        margin-top: 0;
+        font-size: 18px;
+      }
+
+      nav a {
+        display: block;
+        color: #536273;
+        text-decoration: none;
+        margin-bottom: 18px;
+      }
+
+      main {
+        flex: 1;
+        padding: 35px;
+        background-color: white;
+      }
+
+      .card {
+        background-color: #f8fafc;
+        border: 1px solid #dde3ea;
+        border-radius: 8px;
+        padding: 20px;
+        margin-top: 22px;
+      }
+
+      aside {
+        width: 200px;
+        background-color: #f7f9fb;
+        padding: 24px;
+      }
+
+      .side-card {
+        background-color: white;
+        border: 1px solid #dde3ea;
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 18px;
+      }
+
+      footer {
+        background-color: #303841;
+        color: white;
+        text-align: center;
+        padding: 22px;
+      }
+
+      footer a {
+        color: #d6d9dd;
+        text-decoration: none;
+        margin: 0 12px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Holy Grail Layout Demo</h1>
+    </header>
+
+    <div class="page">
+      <nav>
+        <h2>Navigation</h2>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <main>
+        <h2>Welcome to the Holy Grail Layout</h2>
+        <p>
+          This is a demonstration of the classic Holy Grail layout implemented
+          using CSS Flexbox. The center column contains the main content, while
+          the left and right columns contain navigation and extra information.
+        </p>
+
+        <div class="card">
+          <h3>Key Features</h3>
+          <p>
+            This layout demonstrates flexible content areas, sticky footer
+            positioning, and simple page sections that adapt to different
+            content sizes.
+          </p>
+        </div>
+      </main>
+
+      <aside>
+        <h2>Sidebar</h2>
+
+        <div class="side-card">
+          <h3>Quick Info</h3>
+          <p>This sidebar demonstrates how extra content areas work.</p>
+        </div>
+
+        <div class="side-card">
+          <h3>Latest News</h3>
+          <p>Small content boxes can be displayed here.</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <p>2025 Holy Grail Layout Demo. Built with CSS Flexbox.</p>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Support</a>
+    </footer>
+  </body>
+</html>

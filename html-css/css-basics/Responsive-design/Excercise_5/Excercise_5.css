@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background-color: peachpuff;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 35px;
+}
+
+.card {
+  display: flex;
+  background-color: white;
+  border: 10px solid #6977e5;
+  border-radius: 10px;
+}
+
+.image-box {
+  width: 40%;
+  background:darkmagenta;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.photo-1 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url("https://www.cnet.com/a/img/resize/bb8a2aa9c31f8ec08d82228a51eabf05f00e54d2/hub/2025/03/10/d190e21d-9634-440d-8f33-396c8cb3da6a/m4-macbook-air-15-11.jpg?auto=webp&height=500");
+  background-size: cover;
+  background-position: center;
+}
+
+
+.icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.content {
+  flex: 1;
+  padding: 45px;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 30px;
+}
+
+p {
+  color: gray;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.price {
+  color: red;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+button {
+  border: 0;
+  background:purple;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+@media (max-width: 900px) {
+  body {
+    align-items: flex-start;
+    background:peachpuff;
+  }
+
+  .card {
+    width: 620px;
+    flex-direction: column;
+    border: 0;
+  }
+
+  .image-box {
+    width: 100%;
+    min-height: 290px;
+  }
+
+  .content {
+    padding: 40px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  .card {
+    width: 100%;
+    border: 6px solid peachpuff;
+  }
+
+  .image-box {
+    min-height: 210px;
+  }
+
+  .content {
+    padding: 28px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  .bottom {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .price {
+    font-size: 24px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 15px;
+  }
+}
