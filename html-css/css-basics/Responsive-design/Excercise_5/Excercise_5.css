@@ -37,19 +37,6 @@ body {
 }
 
 
-.icon {
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.25);
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  font-weight: bold;
-}
-
 .content {
   flex: 1;
   padding: 45px;
