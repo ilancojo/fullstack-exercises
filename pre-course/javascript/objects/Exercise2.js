@@ -1,7 +1,6 @@
 
 console.log("Exercise 2:");
 
-{
   const library = {
     books: [
       {
@@ -28,4 +27,3 @@ console.log("Exercise 2:");
   };
 
   console.log(library);
-}
