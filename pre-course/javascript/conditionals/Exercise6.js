@@ -1,5 +1,5 @@
 
-console.log("This is exercise 6:")  
+console.log("This is exercise 6:") ;
 /*
 Exercise 6
 Leap Year Calculator. Create a variable for a year and determine if it's a leap year using conditional statements.
