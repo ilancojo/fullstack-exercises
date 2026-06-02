@@ -1,16 +1,16 @@
-console.log("This is exercise 1:") ; 
-
+console.log("Exercise 1:");
 
 const push = function () {
-
-  console.log("pushing it!")
-}
+  console.log("pushing it!");
+};
 
 const pull = function () {
+  console.log("pulling it!");
+};
 
-  console.log("pulling it!")
-}
+const pushPull = function (action) {
+  action();
+};
 
-
-pushPull(push) //should print "pushing it!"
-pushPull(pull) //should print "pulling it!"
+pushPull(push); // should print "pushing it!"
+pushPull(pull); // should print "pulling it!"
