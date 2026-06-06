@@ -1,4 +1,4 @@
-console.log("Exercise 6.1:");
+console.log("Exercise 6 (full) :");
 
 const coffeeShop = {
   beans: 40,
