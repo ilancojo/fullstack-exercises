@@ -1,13 +1,36 @@
-const post = [
-     {name: Ilan1,text: "Happy birthday 1 !"},
-     {name: Ilan2,text: "Happy birthday 2 !"},
-     {name: Ilan3,text: "Happy birthday 3 !"},
-     {name: Ilan4,text: "Happy birthday 4 !"},
-];
+
+const posts = [];
+
 function render() {
-  const randomText = Math.floor(Math.random() * post.length);
-  return post[randomText];
+
+    const container = document.getElementById("container")  
+
+     // 1) delete UI
+    container.innerHTML = "";
+    //$( #container ).empty();
+
+    for (let i = 0; i < posts.length; i++) {
+    
+        const div = document.createElement("div")
+        div.innerText = posts[i].name + ":" + posts[i].text ;
+        container.appendChild(div)
+    }
 }
 
+
+function addPost() {
+    const inputName = document.getElementById("inputName")
+    const inputWish = document.getElementById("inputWish")
+    const nameVal = inputName.value
+    const wishVal = inputWish.value
+
+    posts.push({
+        name: nameVal,
+        text: wishVal
+    })
+    render()
+}
+
+document.getElementById("postBtn").addEventListener("click", addPost)
 
 
