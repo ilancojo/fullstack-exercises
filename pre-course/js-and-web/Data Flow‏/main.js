@@ -28,9 +28,10 @@ function addPost() {
         name: nameVal,
         text: wishVal
     })
+    //The screen needs to be updated after the adding posts.
     render()
 }
 
 document.getElementById("postBtn").addEventListener("click", addPost)
 
-
+render()
