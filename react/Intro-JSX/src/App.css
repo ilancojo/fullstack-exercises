@@ -182,3 +182,22 @@
     border-right-color: var(--border);
   }
 }
+
+
+
+.freezing{
+  background-color: cyan;
+}
+
+.fair{
+  background-color: cornsilk;
+}
+
+.hell-scape{
+  background-color: aquamarine;
+}
+
+#weatherBox{
+  height: 300px;
+  width: 300px;
+}
