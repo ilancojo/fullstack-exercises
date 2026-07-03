@@ -3,13 +3,7 @@ import { useState } from "react";
 
 
 
-function List(){
-  return(
-    <div>
-      List
-    </div>
-  )
-}
+
 
 function Conversation(){
   return(
@@ -18,6 +12,40 @@ function Conversation(){
     </div>
   )
 }
+
+function Contact(props){
+  return(
+    <div>
+      {name}
+    </div>
+  )
+}
+
+function List(props) {
+  let contactName = props.contacts.map(contactName => (
+    <Contact key={contactName} name={contactName} />
+  ))
+  return (
+    <div>
+      {contactName}
+    </div>
+  )
+}
+/*  אותו רעיון מחשבה 
+function List(props) {
+  let contactElements = []
+  for (let name of props.contacts) {
+    contactElements.push(<Contact key={name} name={name} />)
+  }
+  return (
+    <div>
+      {contactElements}
+    </div>
+  )
+}
+*/
+
+
 
 
 function Exercise2() {
@@ -53,7 +81,9 @@ function Exercise2() {
       ]
   });
 
-
+  const contacts  = chatState.conversations.map(contact =>{
+       return contact.with    //["Laura", "Dad", "Shoobert"]
+  })
 
 
 
@@ -61,7 +91,7 @@ function Exercise2() {
   return (
     <div>             
         <div >
-          {chatState.displayConversation === null ? <List /> : <Conversation />}
+          {chatState.displayConversation === null ? <List contacts={contacts} /> : <Conversation />}
         </div>
     </div>
   );
