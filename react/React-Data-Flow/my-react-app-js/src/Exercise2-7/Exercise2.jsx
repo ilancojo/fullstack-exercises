@@ -3,15 +3,27 @@ import { useState } from "react";
 
 
 
+ // props.convo = מערך ההודעות
+  //props.sender = השם של האדם שנבחר
+function Conversation(props) {
+  const messages = props.convo.map((message ,index) => {
+    const displaySender  =  (message.sender === "self")? "Me " : props.sender  ;
 
+      return (
+        <div key={index}>
+          <span className="sender">{displaySender}</span>
+          : {message.text}
+        </div>
+      )
+    })
 
-function Conversation(){
-  return(
+  return (
     <div>
-      Conversation
+      {messages}
     </div>
   )
 }
+
 
 function Contact(props) {
   return (
@@ -105,12 +117,15 @@ function displayConvo(name){
         }));
         
 }
-
-
+ 
+let selectedConversation = chatState.conversations.find(conversation => {
+  return conversation.with === chatState.displayConversation
+})
   return (
     <div>             
         <div >
-          {chatState.displayConversation === null ? <List contacts={contacts} displayConvo={displayConvo} /> : <Conversation />}
+          {chatState.displayConversation === null ? <List contacts={contacts} displayConvo={displayConvo} /> :
+           <Conversation convo = {selectedConversation.convo} sender = {chatState.displayConversation} />}
         </div>
     </div>
   );
