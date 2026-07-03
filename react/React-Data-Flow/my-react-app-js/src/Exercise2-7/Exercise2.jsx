@@ -13,17 +13,29 @@ function Conversation(){
   )
 }
 
-function Contact(props){
-  return(
-    <div>
-      {name}
+function Contact(props) {
+  return (
+    <div onClick={() => props.displayConvo(props.name)}>
+      {props.name}
     </div>
   )
 }
-
+/*
 function List(props) {
   let contactName = props.contacts.map(contactName => (
     <Contact key={contactName} name={contactName} />
+  ))
+  return (
+    <div>
+      {contactName}
+    </div>
+  )
+}
+*/
+
+function List(props) {
+  let contactName = props.contacts.map(contactName => (
+    <Contact key={contactName} name={contactName} displayConvo={props.displayConvo} />
   ))
   return (
     <div>
@@ -85,13 +97,20 @@ function Exercise2() {
        return contact.with    //["Laura", "Dad", "Shoobert"]
   })
 
+function displayConvo(name){
 
+  setChatState(previousState => ({
+           ...previousState,
+        displayConversation: name,  //if null display conversations
+        }));
+        
+}
 
 
   return (
     <div>             
         <div >
-          {chatState.displayConversation === null ? <List contacts={contacts} /> : <Conversation />}
+          {chatState.displayConversation === null ? <List contacts={contacts} displayConvo={displayConvo} /> : <Conversation />}
         </div>
     </div>
   );
