@@ -3,11 +3,9 @@ import { useState } from "react";
 
 
 
- // props.convo = מערך ההודעות
-  //props.sender = השם של האדם שנבחר
 function Conversation(props) {
   const messages = props.convo.map((message ,index) => {
-    const displaySender  =  (message.sender === "self")? "Me " : props.sender  ;
+    const displaySender = (message.sender === "self")? "Me" : props.sender  ;
 
       return (
         <div key={index}>
@@ -19,6 +17,7 @@ function Conversation(props) {
 
   return (
     <div>
+      <button className="back" onClick={props.backToList} >back</button>
       {messages}
     </div>
   )
@@ -30,20 +29,7 @@ function Contact(props) {
     <div onClick={() => props.displayConvo(props.name)}>
       {props.name}
     </div>
-  )
-}
-/*
-function List(props) {
-  let contactName = props.contacts.map(contactName => (
-    <Contact key={contactName} name={contactName} />
-  ))
-  return (
-    <div>
-      {contactName}
-    </div>
-  )
-}
-*/
+  )}
 
 function List(props) {
   let contactName = props.contacts.map(contactName => (
@@ -69,14 +55,11 @@ function List(props) {
 }
 */
 
-
-
-
 function Exercise2() {
 
   const [chatState, setChatState ] = useState(
   {
-      displayConversation: null,  //if null display conversations
+      displayConversation: null,
       conversations: [
           {
               with: "Laura", convo: [
@@ -109,23 +92,33 @@ function Exercise2() {
        return contact.with    //["Laura", "Dad", "Shoobert"]
   })
 
-function displayConvo(name){
+  function displayConvo(name){
 
-  setChatState(previousState => ({
-           ...previousState,
-        displayConversation: name,  //if null display conversations
-        }));
-        
-}
- 
-let selectedConversation = chatState.conversations.find(conversation => {
-  return conversation.with === chatState.displayConversation
-})
+    setChatState(previousState => ({
+            ...previousState,
+          displayConversation: name, 
+          }));
+  }
+
+  function backToList(){
+    setChatState(previousState => ({
+            ...previousState,
+          displayConversation: null,  
+          }));     
+  } 
+
+
+
+
+  let selectedConversation = chatState.conversations.find(conversation => {
+    return conversation.with === chatState.displayConversation
+  });
+
   return (
     <div>             
         <div >
           {chatState.displayConversation === null ? <List contacts={contacts} displayConvo={displayConvo} /> :
-           <Conversation convo = {selectedConversation.convo} sender = {chatState.displayConversation} />}
+           <Conversation convo = {selectedConversation.convo} sender = {chatState.displayConversation} backToList={backToList} />}
         </div>
     </div>
   );
