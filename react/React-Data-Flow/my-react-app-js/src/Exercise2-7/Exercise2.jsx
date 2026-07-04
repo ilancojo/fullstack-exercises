@@ -107,9 +107,6 @@ function Exercise2() {
           }));     
   } 
 
-
-
-
   let selectedConversation = chatState.conversations.find(conversation => {
     return conversation.with === chatState.displayConversation
   });

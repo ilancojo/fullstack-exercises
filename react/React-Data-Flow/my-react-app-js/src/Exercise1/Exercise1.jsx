@@ -31,13 +31,10 @@ function Exercise1() {
         currentImg: prevGallery.currentImg + 1,
   // אם נרצה לעשות בסיבוב את התמונות       
  //currentImg: (prevGallery.currentImg + 1) % prevGallery.images.length,
-       
-
          }));
   }
 
-
-
+  
   return (
     <div>             
         <button className="back" onClick={shiftImageBack}>
