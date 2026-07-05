@@ -22,7 +22,7 @@ function Posts() {
     useEffect(() => {
         function handleResize() {
             // בדוק window.innerWidth
-            setIsSmallScreen(true);
+            setIsSmallScreen((window.innerWidth < 768));//(window.innerWidth < 768)?true:false);
         }
 
         handleResize()
@@ -39,7 +39,7 @@ function Posts() {
     <div>
       <h1>Top Posts</h1>
 
-      <div className="posts-container">
+      <div className={(isSmallScreen)?"posts-container posts-container-mobile":"posts-container"}>
         {
           posts.map(post => (
             <div className="post-card" key={post.id}>
