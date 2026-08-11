@@ -51,6 +51,21 @@ app.get("/priceCheck/:name",(req,res)=>{
 
 });
 
+
+app.get("/sale", (req, res) => {
+    const admin = req.query.admin   // localhost:8080/sale/?admin=true 
+   
+    if (admin === "true") {
+        store.forEach(item => {
+            if (item.inventory > 10) {
+                item.price = item.price / 2
+            }
+        })
+    }
+    res.send(store)
+})
+
+
 app.listen(port, function(){
     console.log(`Running server on port ${port}`)
 })
