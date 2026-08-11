@@ -1,5 +1,4 @@
 const express = require("express");
-const http = require("http");
 const app = express();
 const path = require("path");
 
@@ -25,24 +24,32 @@ app.get("/",(req,res)=>{
     res.send("Server is up and running smoothly");
 });
 
+
 app.get("/buy/:name",(req,res)=>{
-    res.send("Server is up and running smoothly");
+
+   const itemName = req.params.name 
+   const item = store.find(furniture => furniture.name === itemName)
+    if (item === undefined) {
+        res.send({ error: "Item does not exist" })
+    } else {
+        item.inventory--
+        res.send(item)
+    }
 });
+
 
                     //paramter - name
 app.get("/priceCheck/:name",(req,res)=>{
 
-    const itemName = req.params.name
+    const itemName = req.params.name 
     const item = store.find(furniture => furniture.name === itemName)
+    //find return undefined if item is not Exists - (null)
+    const itemInfo = (item === undefined) ? { price: null } : { price: item.price };
+    //const itemInfo = item ? { price: item.price } : { price: null }   קצר יותר
 
-    if (item) {
-        res.send({ price: item.price })
-    } else {
-        res.send({ price: null })
-    }
+    res.send(itemInfo);
 
 });
-
 
 app.listen(port, function(){
     console.log(`Running server on port ${port}`)
